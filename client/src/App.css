@@ -1,0 +1,111 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255,153,0);
+  min-height: 100vh;
+  color: black;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(120,63,4);
+  
+}
+
+.App-header h1 {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+button {
+  margin-left: auto;
+}
+
+.pirate-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 600px;
+  border: 4px solid black;
+  
+}
+
+.pirate-img {
+  margin-right: 10px;
+  height: 150px;
+  width: 150px;
+  margin-right: 8em;
+}
+
+.pirate-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.pirate-Leftcontent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  /* width: 600px; */
+}
+
+.pirate-Leftcontent > div {
+  padding: 0 20px;  
+  box-sizing: border-box;
+ 
+}
+
+.pirate-Leftcontent img {
+  max-width: 100%;
+  height: 400px;
+  width: 400px;
+  margin-right: 2em;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 4px solid black;
+  background-color: white;
+  color:black;
+  width: 600px;
+  height: 800px;
+  text-align: center;
+  font-size: x-large;
+}
+
+.about-section button {
+  width: 50px;
+  margin-left: 1em;
+}
+
+.yes-button {
+  background-color: green;
+}
+
+.no-button {
+  background-color: red;
+}
+.catch-phrase{
+  text-align: center;
+  font-size: 100px;
+  margin-right: 1em;
+}
+.centerClass{
+  text-align: center;
+  margin-left: 15em;
+}
