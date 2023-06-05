@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import LogoutButton from './LogoutButton';
 
 function AddPirate() {
   const navigate = useNavigate();
@@ -41,6 +42,7 @@ function AddPirate() {
     <div>
       <h1>Add Pirate</h1>
       <Link to="/pirates"><button>Crew Board</button></Link>
+      <LogoutButton />
       <form onSubmit={addPirate}>
         <label>Pirate Name:</label>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
@@ -80,6 +82,7 @@ function AddPirate() {
 
         <button type="submit">Add Pirate</button>
       </form>
+
     </div>
   );
 }

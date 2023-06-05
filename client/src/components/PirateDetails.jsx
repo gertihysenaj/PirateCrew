@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import {useNavigate } from 'react-router-dom';
+import LogoutButton from './LogoutButton';
 
 function PirateDetails() {
   const { id } = useParams();
@@ -47,6 +48,7 @@ function PirateDetails() {
       <button onClick={() => navigate("/pirates")} style={{ alignSelf: 'flex-end' }}>
         Crew Dashboard
       </button>
+      <LogoutButton />
     </header>
       
     <div className="pirate-details">

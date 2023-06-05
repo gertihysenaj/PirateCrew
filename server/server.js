@@ -3,13 +3,15 @@ const app = express();
 const port = 8000;
 
 const cors = require('cors');
+require('dotenv').config();
+const cookieParser = require('cookie-parser');
 
-app.use(cors());
+app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
 app.use(express.json());
-
+app.use(cookieParser());
 
 require('./config/mongoose.config');
-const routes = require('./routes/Pirate.routes');
-routes(app);
+require('./routes/User.routes')(app);
+require('./routes/Pirate.routes')(app);
 
-app.listen(port, () => console.log(`Listening on port: ${port}`) );
+app.listen(port, () => console.log(`Listening on port: ${port}`));

@@ -50,14 +50,14 @@ module.exports.deletePirate = (req, res) => {
 };
 
 
-module.exports.register = (req, res) => {
-    const { firstName, lastName, email, password } = req.body;
+// module.exports.register = (req, res) => {
+//     const { firstName, lastName, email, password } = req.body;
     
-    res.json({ message: 'User registered successfully. Redirecting to the home page...' });
-  };
+//     res.json({ message: 'User registered successfully. Redirecting to the home page...' });
+//   };
 
-  module.exports.login = (req, res) => {
-    const { email, password } = req.body;
+//   module.exports.login = (req, res) => {
+//     const { email, password } = req.body;
 
-    res.json({ message: 'User logged in successfully. Redirecting to the home page...' });
-  };
+//     res.json({ message: 'User logged in successfully. Redirecting to the home page...' });
+//   };

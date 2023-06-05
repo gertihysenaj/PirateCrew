@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import LogoutButton from './LogoutButton';
 
 
 function Dashboard() {
@@ -27,6 +28,7 @@ function Dashboard() {
         <button onClick={() => navigate("/pirate/new")} style={{ alignSelf: 'flex-end' }}>
           Add Pirate
         </button>
+        <LogoutButton />
       </header>
     <div>
       <h1>Pirate Crew</h1>

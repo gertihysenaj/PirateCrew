@@ -3,18 +3,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255,153,0);
+  background-color: rgb(200, 122, 5);
   min-height: 100vh;
   color: black;
-}
+} 
 
-.App-header {
+ .App-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 10px;
-  background-color: rgb(120,63,4);
+  background-color: rgb(148, 79, 6);
   
 }
 
@@ -26,9 +26,9 @@
 
 button {
   margin-left: auto;
-}
+} 
 
-.pirate-card {
+ .pirate-card {
   display: flex;
   align-items: center;
   background-color: white;
@@ -59,7 +59,7 @@ button {
   justify-content: space-between;
   margin-top: 20px;
 
-  /* width: 600px; */
+   /* width: 600px;  */
 }
 
 .pirate-Leftcontent > div {
@@ -108,4 +108,32 @@ button {
 .centerClass{
   text-align: center;
   margin-left: 15em;
+} 
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-section {
+  width: 600px;
+  height: 100%;
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.form-section h2 {
+  text-align: center;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section input,
+.form-section button {
+  margin-bottom: 10px;
 }
