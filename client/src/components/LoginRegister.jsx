@@ -39,21 +39,32 @@ const register = (event) => {
         return;
         }
         
-        axios.post('http://localhost:8000/api/register', registerState)
-        .then(response => {
-        setRegisterMessage(response.data.message);
+        console.log("Attempting to register with data: ", registerState);
 
-        localStorage.setItem('user', JSON.stringify(response.data.user));
-        localStorage.setItem('token', response.data.token);
+axios.post('http://localhost:8000/api/register', registerState)
+.then(response => {
+  console.log("Response from server: ", response);
+  setRegisterMessage('User registered successfully!');
 
-        setTimeout(() => {
-        navigate('/pirates');
-        }, 5000);
-        })
-        .catch(err => {
-        console.error(err);
-        });
-        }
+  localStorage.setItem('user', JSON.stringify(response.data.user));
+  localStorage.setItem('token', response.data.token);
+
+  setTimeout(() => {
+    navigate('/pirates');
+  }, 5000);
+})
+.catch(err => {
+  console.error(err);
+  if (err.response) {
+    console.log("Error from server: ", err.response.data);
+    setRegisterMessage(err.response.data.message);
+  } else if (err.request) {
+    console.log("Error in request: ", err.request);
+  } else {
+    console.log('Other error', err.message);
+  }
+});
+}
 
 
   const login = (event) => {

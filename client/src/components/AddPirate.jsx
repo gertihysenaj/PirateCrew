@@ -17,6 +17,7 @@ function AddPirate() {
   const [errors, setErrors] = useState(null);
 
   const addPirate = (event) => {
+    console.log('AddPirate component loaded');
     event.preventDefault();
 
     const newPirate = {

@@ -1,20 +1,17 @@
 import React from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
-import Dashboard from './Dashboard';
-import AddPirate from './AddPirate';
-import PirateDetails from './PirateDetails';
+import { useNavigate } from 'react-router-dom';
 
-const ProtectedRoute = () => {
-  const token = localStorage.getItem('token');
-  return token ? (
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/pirate/new" element={<AddPirate />} />
-      <Route path="/pirate/:id" element={<PirateDetails />} />
-    </Routes>
-  ) : (
-    <Navigate to="/" replace />
-  );
+const ProtectedRoute = ({children}) => {
+    const token = localStorage.getItem('token');
+    const navigate = useNavigate();
+    
+    React.useEffect(() => {
+      if (!token) {
+        navigate("/");
+      }
+    }, [token, navigate]);
+    
+    return token ? children : null;
 };
 
 export default ProtectedRoute;

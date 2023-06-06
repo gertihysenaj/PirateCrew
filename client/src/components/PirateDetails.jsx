@@ -10,6 +10,7 @@ function PirateDetails() {
   const [pirate, setPirate] = useState("");
   const [update, setUpdate] = useState(true);
   const navigate = useNavigate();
+  console.log('PirateDetails component loaded');
 
   useEffect(() => {
     axios.get(`http://localhost:8000/api/pirates/${id}`)

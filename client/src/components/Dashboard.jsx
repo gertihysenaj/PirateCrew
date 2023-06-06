@@ -25,21 +25,20 @@ function Dashboard() {
     <div>
       <header className="App-header">
         <h1>Pirate Crew</h1>
-        <button onClick={() => navigate("/pirate/new")} style={{ alignSelf: 'flex-end' }}>
+        <button onClick={() => navigate("/pirates/new")} style={{ alignSelf: 'flex-end' }}>
           Add Pirate
         </button>
         <LogoutButton />
       </header>
     <div>
       <h1>Pirate Crew</h1>
-      <button onClick={() => navigate("/pirate/new")} style={{float: 'right'}}>Add Pirate</button>
       {pirates.map(pirate => (
         <div key={pirate._id} className="pirate-card">
           <img src={pirate.imageUrl} alt={pirate.name} className="pirate-img" />
           <div className="pirate-details">
             <h2>{pirate.name}</h2>
             <div className="pirate-actions">
-              <Link to={`/pirate/${pirate._id}`}><button>View Pirate</button></Link>
+              <Link to={`/pirates/${pirate._id}`}><button>View Pirate</button></Link>
               <button onClick={() => deletePirate(pirate._id)}>Delete</button>
             </div>
           </div>
